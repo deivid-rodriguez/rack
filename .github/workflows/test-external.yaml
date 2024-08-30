@@ -16,7 +16,7 @@ jobs:
     runs-on: ${{matrix.os}}
     env:
       CI: external
-      BUNDLER_VERSION: 2.5.0
+      BUNDLER_VERSION: 2.5.9
 
     steps:
     - uses: actions/checkout@v4
@@ -24,7 +24,7 @@ jobs:
     - uses: ruby/setup-ruby-pkgs@v1
       with:
         ruby-version: ${{matrix.ruby}}
-        bundler: 2.5.0
+        bundler: 2.5.9
         bundler-cache: true
         apt-get: _update_ libfcgi-dev libmemcached-dev
         brew: fcgi libmemcached
